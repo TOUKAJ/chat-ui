@@ -9,11 +9,11 @@
 <script lang="ts" setup>
 const handleBeforeUnload = () => {
   // 刷新页面，删除 session
-  // let name = sessionStorage.getItem("name");
-  // if (name != null || name != "") {
-  //   sessionStorage.removeItem("name");
-  //   sessionStorage.clear();
-  // }
+  let name = sessionStorage.getItem("name");
+  if (name != null || name != "") {
+    sessionStorage.removeItem("name");
+    sessionStorage.clear();
+  }
 };
 window.addEventListener("beforeunload", handleBeforeUnload);
 </script>
